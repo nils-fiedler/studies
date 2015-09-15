@@ -1,2 +1,2 @@
 # studies
-studies on different frontend development related topics
+These are studies on different frontend development related topics.
