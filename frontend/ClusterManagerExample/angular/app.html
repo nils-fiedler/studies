@@ -1,0 +1,42 @@
+<!doctype html>
+<html ng-app="clusterManagerApp">
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/cssreset-min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/angular.1.4.4.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/mock.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-controller="clusterManagerCtrl">
+    <aside>
+      <nav class="server">
+        <div class="server-ctrl add" ng-click="addServer()"><div class="circle">+</div><p>Add Server</p></div>
+        <div class="server-ctrl destroy" ng-click="destroyServer()"><div class="circle">&ndash; </div><p>Destroy</p></div>
+      </nav>
+      <nav class="apps">
+        <p>Available Apps</p>
+        <ul>
+          <li class="available-app" ng-repeat="app in availableApps">
+            <span class="app-block app-color-{{app.id}}"></span>
+            <span class="app-title">{{app.title}}</span>
+            <span class="app-ctrl circle kill" ng-click="killApp(app)">&ndash; </span>
+            <span class="app-ctrl circle start app-color-{{app.id}}" ng-click="startApp(app.id)">+</span>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+	  <h1>Cluster Monitor</h1>
+      <div class="server-monitor" ng-repeat="(id, server) in servers">
+        <div class="instance app-color-{{instance.appId}}" ng-repeat="instance in server.apps" ng-class="{true: 'split', false: ''}[server.apps.length > 1]">
+			  <p class="instance-tag">{{availableApps[instance.appId].tag}}</p>
+			  <p class="instance-title">{{availableApps[instance.appId].title}}</p>
+			  <p class="instance-start-time">Started {{instance.startTime | refreshRunningTimes:date}} ago</p>
+		</div>
+		<p ng-if="server.apps.length == 0" class="creation-date">Running for {{server.creationDate | refreshRunningTimes:date}}</p>
+		<div class="destroy-overlay triangle" ng-click="destroyServer(id)"><span>&times;</span></div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,251 @@
+@media (max-height: 600px) {
+	nav.apps {
+		padding-top: 50px;
+	}
+}
+@media (max-height: 500px) {
+	nav.apps {
+		padding-top: 20px;
+	}
+}
+@media (max-height: 435px) {
+	body aside {
+		position: absolute;
+	}
+}
+
+html {
+    background-color: #000;
+    font-family: sans-serif;
+    font-size: 11px;
+    color: #fbfbfb;
+    height: 100%;
+}
+
+
+body,
+.apps {
+    padding-bottom: 15px;
+}
+
+aside {
+    width: 280px;
+    min-width: 120px;
+    height: 100%;
+    box-sizing: border-box;
+    position: fixed;
+}
+
+aside,
+nav {
+    background-color: #1e1e1e;
+}
+
+main {
+	display: block;
+    margin: 0 15px 0 295px;
+}
+
+.server {
+    overflow: hidden;
+    width: 150px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.server-ctrl {
+    float: left;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.destroy ,
+.kill,
+.add:hover {
+    opacity: 0.4;
+}
+
+.start:hover {
+    opacity: 0.8;
+}
+
+.destroy:hover,
+.kill:hover {
+    opacity: 0.05;
+}
+
+.circle {
+    border-radius: 50%;
+    border: 2px solid #fbfbfb;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.server-ctrl .circle {    
+    width: 54px;
+    height: 54px;
+    font-size: 40px;
+    padding: 3px;
+}
+
+.destroy .circle {
+    padding: 0px;
+}
+
+.server-ctrl p {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.apps {
+    padding-top: 175px;
+}
+
+.apps p {
+    color: #616161;
+    padding: 0 0 15px 20px;
+}
+
+.apps ul {
+    font-size: 110%;
+}
+
+.apps li {
+    color: #fbfbfb;
+    background-color: #141414;
+    margin-top: 1px;
+    padding: 15px 0;
+    line-height: 20px;
+}
+
+.app-block {
+    padding: 19px 5px 19px 0;
+}
+
+.app-title {
+    padding-left: 25px;
+}
+
+.app-ctrl {
+    position: absolute;
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
+    font-size: 21px;
+}
+
+.kill {
+    right: 20px;
+    padding: 1px;
+}
+
+.start {
+	right: -14px;
+    border: none;
+    padding: 3px;
+}
+
+h1 {
+    font-size: 24px;
+    padding: 10px;
+}
+
+.server-monitor {
+    float: left;
+    width: 170px;
+    height: 125px;
+    background-color: #1e1e1e;
+    margin: 15px 0 0 15px;
+	position: relative;
+}
+
+.server-monitor:last-child {
+    margin-bottom: 15px;
+}
+
+.destroy-overlay {
+    display: none;
+    position: absolute;
+    font-size: 30px;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+	cursor: pointer;
+}
+
+.server-monitor:hover  > .destroy-overlay {
+    display: block;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 60px 60px 0;
+    border-color: transparent #000 transparent transparent;
+}
+
+.destroy-overlay  span {
+    position: absolute;
+    top: 0;
+    right: -50px;
+    color: #fff;
+}
+
+.server-monitor,
+.instance {
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.creation-date {
+    text-align: center;
+    padding-top: 77px;
+}
+
+.instance {
+    padding: 20px 10px 10px;
+    color: black;
+    text-align: center;
+    height: 100%;
+}
+
+.split .instance {
+    width: 50%;
+    float: left;
+    border-radius: 0 3px 3px 0;
+}
+
+.split .instance:first-child {
+    border-radius: 3px 0 0 3px;
+}
+
+.instance-tag{
+    font-size: 24px;
+}
+
+.instance-tag,
+.instance-title {
+    color: white;
+    font-weight: bold;
+    line-height: 28px;
+}
+
+.app-color-0 {
+    background-image: linear-gradient(to bottom right, #b111c9, #f601b5);
+}
+
+.app-color-1 {
+    background-image: linear-gradient(to bottom right, #1f35f9, #6724ea);
+}
+
+.app-color-2 {
+    background-image: linear-gradient(to bottom right, #02d0fa, #0085f9);
+}
+
+.app-color-3 {
+    background-image: linear-gradient(to bottom right, #34e285, #20d8b4);
+}
+
+.app-color-4 {
+    background-image: linear-gradient(to bottom right, #73fc00, #5fe331);
+}
